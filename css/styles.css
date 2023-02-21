@@ -557,10 +557,6 @@ padding-bottom: 120px;
     border-top: none;
 }
 
-.portfolio-card:hover, .portfolio-card:focus > .card-content {
-    border: 1px solid var(--light);
-}
-
 .card-content > .item-subtitle {
     margin-bottom: 8px;
 }
