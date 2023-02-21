@@ -113,7 +113,6 @@ body { /*BODY*/
 
 .container {
     width: 1158px;
-    height: auto;
 
     margin-left: auto;
     margin-right: auto;
@@ -181,11 +180,8 @@ body { /*BODY*/
     font-weight: 500;
     color: var(--dark);
 }
-.nav-link:hover {
+.nav-link:hover, .nav-link:focus {
     color: var(--pressed);
-}
-.nav-link:active {
-color: var(--pressed);
 }
 
 .address-list {
@@ -193,19 +189,14 @@ color: var(--pressed);
     gap: 40px;
 }
 
-.mail-link:hover {
-    color: var(--pressed);
-}
-.mail-link:active {
+.mail-link:hover, .mail-link:focus {
     color: var(--pressed);
 }
 
-.tel-link:hover {
+.tel-link:hover, .tel-link:focus {
     color: var(--pressed);
 }
-.tel-link:active {
-    color: var(--pressed);
-}
+
 
 
 /*-------- hero section ------------ */
@@ -213,13 +204,15 @@ color: var(--pressed);
 .hero-section {
 
     background-color: var(--hero-background);
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(/images/hero-bg.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .hero-title {
@@ -335,6 +328,7 @@ background-color: var(--white);
     border-radius: 0px 0px 4px 4px;
 }
 
+
 .team-item-content {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -361,34 +355,32 @@ background-color: var(--primary-brand);
 height: 40px;
 width: 40px;
 
-
-
 border-radius: 50%;
 display: flex;
+justify-content: center;
 align-items: center;
 }
 
-.media-icon-background:hover {
+.media-icon-background:hover, 
+.media-icon-background:focus {
     background-color: var(--pressed);
 }
-
-
 
 .media-icon {
     width: 16px;
     height: 16px;
-    margin: 12px 12px 12px 12px;
+    fill: var(--light);
 }
 
 .media-icon:hover {
-    fill: var(--dark);
+ 
 }
 
 
 /*----------- client-section ------------ */
 
 .customer-section {
-padding-top: 120px;
+padding-top: 130px;
 padding-bottom: 120px;
 }
 
@@ -402,34 +394,40 @@ padding-bottom: 120px;
     column-gap: 24px;
 }
 
-.customer-item {
+.customer-link {
     border: 1px solid var(--subtle-text);
     border-radius: 4px;
 
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 32px;
-    padding-right: 32px;
-
+width: 168px;
+height: 88px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.customer-item:hover {
+.customer-link:hover, .customer-link:focus {
     border: 1px solid var(--pressed);
 }
 
-.customer-item.customer-icon:hover {
-    fill: var(--pressed);
-}
 
 .customer-icon {
+    fill: var(--subtle-text);
     width: 104px;
     height: 56px;
 }
+
+.customer-link:hover > .customer-icon {
+    fill: var(--pressed);
+}
+.customer-link:focus > .customer-icon {
+    fill: var(--pressed);
+}
+
+
+
 /*----------- footer ------------ */
 .footer-text-container {
+    margin-right: 120px;
     display: inline-block;
 }
 .footer-section {
@@ -442,15 +440,16 @@ padding-bottom: 120px;
     display: flex;
     align-items: baseline;
     justify-content: left;
-    column-gap: 120px;
 }
 
 .footer-paragraph {
     width: 264px;
     color: var(--accent);
+    margin-top: 16px;
 }
 
 .footer-section > .container > .logo-footer {
+
     display: block;
     margin-bottom: 16px;
 
@@ -479,17 +478,18 @@ padding-bottom: 120px;
     border-radius: 50%;
     padding: 8px;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.footer-media-item:hover {
+.footer-media-item:hover, .footer-media-item:focus {
     background-color: var(--success);
 }
-
 
 .footer-media-icon {
     width: 24px;
     height: 24px;
+    fill: var(--light);
 }
 
 /*========================PORTFOLIO========================*/
@@ -548,10 +548,11 @@ padding-bottom: 120px;
 }
 
 
-.portfolio-card {
-    width: 360px;
-    object-fit: cover;
-    border: 1px solid var(--accent)
+.portfolio-card:hover {
+    
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card-content {
@@ -559,6 +560,12 @@ padding-bottom: 120px;
     padding-bottom: 32px;
     padding-left: 16px;
     padding-right: 16px;
+    border: 1px solid var(--accent);
+    border-top: none;
+}
+
+.portfolio-card:hover > .card-content {
+    border: 1px solid var(--light);
 }
 
 .card-content > .item-subtitle {
