@@ -240,11 +240,7 @@ body { /*BODY*/
     border: none;
 }
 
-.order-button:active {
-    background-color: var(--pressed);
-}
-
-.order-button:hover {
+.order-button:hover, .order-button:focus {
     background-color: var(--pressed);
 }
 
