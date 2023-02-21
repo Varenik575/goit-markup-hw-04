@@ -372,11 +372,6 @@ align-items: center;
     fill: var(--light);
 }
 
-.media-icon:hover {
- 
-}
-
-
 /*----------- client-section ------------ */
 
 .customer-section {
@@ -482,7 +477,8 @@ height: 88px;
     align-items: center;
 }
 
-.footer-media-item:hover, .footer-media-item:focus {
+.footer-media-item:hover, 
+.footer-media-item:focus {
     background-color: var(--success);
 }
 
@@ -529,7 +525,8 @@ padding-bottom: 120px;
     border-radius: 4px;
 
 }
-.filter-button:hover {
+.filter-button:hover,
+.filter-button:focus {
     color: var(--white);
     background-color: var(--primary-brand);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
